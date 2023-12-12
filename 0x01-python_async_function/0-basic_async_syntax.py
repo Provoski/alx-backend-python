@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+"""0-basic_async_syntax module"""
 import asyncio
 import random
 from typing import List
-"""0-basic_async_syntax module"""
 
 
 async def wait_random(max_delay: float = 10) -> float:
