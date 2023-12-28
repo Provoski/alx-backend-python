@@ -9,7 +9,10 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """module 2"""
     delays: List[float] = []
-    tasks: float = [wait_random(max_delay) for _ in range(n)]
+    tasks = [wait_random(max_delay) for _ in range(n)]
     results: List[float] = await asyncio.gather(*tasks)
-    delays = sorted(results)
+
+    # Append sorted results to delays
+    delays.extend(sorted(results))
+
     return delays
