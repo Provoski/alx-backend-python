@@ -117,6 +117,7 @@ class TestGithubOrgClient(unittest.TestCase):
         client_has_licence = gh_org_client.has_license(repo, key)
         self.assertEqual(client_has_licence, expected)
 
+
 @parameterized_class([
     {
         'org_payload': TEST_PAYLOAD[0][0],
@@ -125,7 +126,6 @@ class TestGithubOrgClient(unittest.TestCase):
         'apache2_repos': TEST_PAYLOAD[0][3],
     },
 ])
-
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """Performs integration tests for the `GithubOrgClient` class."""
     @classmethod
